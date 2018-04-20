@@ -1,0 +1,62 @@
+<div>
+<form class="col-md-4">
+    <button (click)="clickBtn(username.value, email.value, description.value)" class="btn btn-default btn-danger floatleft">{{buttonContent}}</button>
+
+    <div class="profile">
+        <div class="header">{{currentProfile.status==3? "Customer" : currentProfile.status == 1? "Admin": "Seller"}}</div>
+        <div class="header">Joined at
+            <strong>{{currentProfile.createdAt}}</strong>
+        </div>
+        <div class="avatar">
+            <img height="150" width="150" src="http://www.iconninja.com/files/929/296/21/headset-person-man-avatar-support-male-young-icon.svg"
+                alt="Avatar">
+        </div>
+        <label class="btn btn-xs btn-default btn-primary ma">Email :</label>
+        <input class="name" #email value="{{currentProfile.email}}" [attr.disabled]="!isEditMode ? '' : null">
+        <label class="btn btn-xs btn-default btn-primary ma">Name :</label>
+        <input class="name" #username value="{{currentProfile.username}}" [attr.disabled]="!isEditMode ? '' : null">
+        <div>Balance： ${{currentProfile.money}}</div>
+        <div class="separateName"></div>
+        <label>description:</label>
+        <textarea class="description" #description [attr.disabled]="isEditMode?null:''">
+            {{currentProfile.description}}
+        </textarea>
+    </div>
+</form>
+<div class="container" class="col-md-8">
+    <div class="page-header text-center">
+        <h1 id="timeline">Shopping Timeline</h1>
+    </div>
+    <ul class="timeline" style ="height: 70vh; overflow: scroll;">
+        <li [class]="i%2==0?'timeline-inverted': ''" *ngFor="let good of goodsList; let i=index">
+            <div class="timeline-badge primary">
+                <a>
+                    <i class="glyphicon glyphicon-record invert" rel="tooltip" title="11 hours ago via Twitter" id=""></i>
+                </a>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <!-- <img class="img-responsive" src="http://lorempixel.com/1600/500/sports/2" /> -->
+                    <img class="img-responsive" [attr.src]="good.imgSrc"  onerror="if (this.src != '../../assets/img/pac-404.png') this.src = '../../assets/img/pac-404.png';"> 
+                </div>
+                <div class="timeline-body">
+                    <p>{{good.name}}</p>
+                    <p>{{good.description}}</p>
+                    <p>${{good.price}}</p>
+                    <p>Bought at: {{good.soldAt}}</p>
+                </div>
+
+                <div class="timeline-footer">
+                    <a>
+                        <i class="glyphicon glyphicon-thumbs-up"></i>
+                    </a>
+                    <a>
+                        <i class="glyphicon glyphicon-share"></i>
+                    </a>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+</div>
+</div>

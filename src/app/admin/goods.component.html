@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="span8">
+        <div *ngFor="let user of users; let i=index;">
+        <h1>{{user.username}}</h1>
+        <p> {{user.description}}</p>
+        <div>
+            <div class="tags">
+                <button class="btn-info" (click)="change(user, 'password')">
+                    <a >Password</a>
+                </button>
+                <button class="btn-info" (click)="change(user, 'email')">
+                    <a>EMAIL</a>
+                </button>
+                <button class="btn-info" (click)="change(user, 'username')">
+                    <a >username</a>
+                </button>
+                <button class="btn-info" (click)="change(user, 'money')">
+                    <a >money</a>
+                </button>
+                <button class="btn-info" (click)="change(user, 'description')">
+                        <a >description</a>
+                    </button>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <hr>
+        </div>
+    </div>
+</div>

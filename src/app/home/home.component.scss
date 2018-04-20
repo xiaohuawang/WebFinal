@@ -1,0 +1,86 @@
+/*styles for home content only*/
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+mat-card {
+  max-width: 80%;
+  margin: 2em auto;
+}
+
+mat-toolbar-row {
+  justify-content: space-between;
+}
+
+#home {
+  margin:0 auto;
+  flex-direction:row-reverse;
+}
+#daphne {
+  margin-top:5%;
+}
+
+.done {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+}
+.banner-technologies-title {
+  color: #0f96ba;
+  font-weight: normal !important;
+  margin: 30px 0 30px 0;
+  display: inline-block;
+}
+
+.main-container{
+    
+  background: #d53369; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #d53369 , #cbad6d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #d53369 , #cbad6d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          
+      }
+  .highlight  {
+      width: 100%;
+      color: white;
+      background: rgba(0, 0, 0, 0.26);
+      border-radius: 10px;
+      padding: 3%;
+      height: 100vh;
+    }
+      
+  .highlight img {
+      
+      float: left;
+      width: 100px;
+      height: 100px; 
+      margin: 10px;
+      }
+      
+  .highlight ul {
+      list-style-image: url('http://icons.iconarchive.com/icons/yusuke-kamiyamane/fugue/16/tick-small-icon.png');
+      margin-left: 1%;
+      float: left; 
+      clear: right
+      }
+      
+  .highlight button {
+     margin-left: 1%;
+      float: right;
+      }
+  
+  .highlight h1,h2,h3,h4,h5,h6 {
+      padding-bottom: 2%;
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.41);
+      font-size:20px;
+      text-align : center;
+      text-transform: uppercase;
+      }
+      
+  .highlight p {
+      text-align: justify;
+      }
+  .links {
+    color: wheat
+  }

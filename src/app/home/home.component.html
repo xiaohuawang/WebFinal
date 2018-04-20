@@ -1,0 +1,55 @@
+<div id="home">
+
+  <!--
+  <div class="banner-technologies">
+    <div class="container">
+      <h2 class="banner-technologies-title"><strong>MEAN</strong> stands for:</h2>
+      <ul class="banner-technologies-inner-technologies">
+        <li><img src="http://www.mean.io/wp-content/themes/twentysixteen-child/images/mongodb.png" alt="MongoDB" width="196px" height=" 65px">
+          <p>MongoDB is the leading NoSQL database, empowering businesses to be more agile and scalable.</p></li>
+        <li><img src="http://www.mean.io/wp-content/themes/twentysixteen-child/images/express.png" alt="Express" width="150px" height="34px">
+          <p>Express is a minimal and flexible node.js web application framework, providing a robust set of features for building single and multi-page, and hybrid web applications.</p></li>
+        <li><img src="http://www.mean.io/wp-content/themes/twentysixteen-child/images/angularjs.png" alt="AngularJS" width="237px" height="70px">
+          <p>AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop.</p></li>
+        <li><img src="http://www.mean.io/wp-content/themes/twentysixteen-child/images/nodejs.png" alt="Node.js" width="205px" height="60px">
+          <p>Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications.</p></li>
+      </ul>
+    </div>
+  </div>
+-->
+
+
+  <div class="main-container">
+
+    <div class=" highlight" style="margin-left:0;">
+      <h2>Super Online Market</h2>
+      <div class="row">
+
+        <img src="http://davidnaylor.org/temp/thunderbird-logo-200x200.png" />
+        <ul>
+          <li>
+            <a [routerLink]="['/']" class="links">A online market for Shopping!</a>
+          </li>
+          <li>
+            <a class="links" [routerLink]="['/login']">If you have a account, login</a>
+          </li>
+          <li>
+            <a class="links" [routerLink]="['/registe']">registe your first account!</a>
+          </li>
+          <li>
+            <a class="links" [routerLink]="['/market']">Go to th Market and start!</a>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <p>
+          You are given $1000 to buy things on Internet. If you want to sell goods, plase registe as seller and you can sell goods to earn money.
+          If you forget your password, find the admin user to change it for you.
+        </p>
+        <a class="btn btn-primary" [routerLink]="['/login']">Login</a>
+        <a class="btn btn-warning" [routerLink]="['/registe']">Registe</a>
+      </div>
+    </div>
+  </div>
+
+</div>

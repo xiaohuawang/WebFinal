@@ -1,0 +1,27 @@
+<div class="back">
+<h1 class="title">You are Viewing at: {{good?.name}}</h1>
+
+<div class="container goods-screen">
+    <div class="row" style='direction:rtl;'>
+        <div class="card w-100 mb-2" >
+            <div class="row">
+                <div class="col-md-3">
+                            <img class="m-1 w-100 img-fluid" style="height: 200px;" [attr.src]="good?.imgSrc" onerror="if (this.src != '../../assets/img/pac-404.png') this.src = '../../assets/img/pac-404.png';"/>
+                </div>
+                <div class="card-body text-right col-md-9">
+                    <h5 class="card-title rtl">
+                        <a [attr.href]="good?.href">Title: {{good?.name}}</a>
+                    </h5>
+                    <p>
+                      <span class="des">Price: {{good?.price}}</span>
+                      <span class="des">Description: {{good?.description}}</span>
+                      <span class="des">Seller: {{good?.seller?.username}}</span><a [attr.href]="good?.seller.email"> Click to send Email to seller: {{good?.seller?.email}}</a>
+                      <span class="des">Status: {{good?.status}}</span>
+                    <button class="label-default label label-warning" (click)='addToCart(good._id)'>Add To Cart</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
