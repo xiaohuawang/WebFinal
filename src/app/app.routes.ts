@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home';
 import { ReactComponent } from './react';
 import { ProfileComponent } from './profile';
-//import { angularProfileCard } from '../../components/main-profile/index';
 import { LoginComponent } from './login'
 import { RegisteComponent } from './registe'
 import { NoContentComponent } from './no-content';

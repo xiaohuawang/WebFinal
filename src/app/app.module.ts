@@ -26,10 +26,6 @@ import 'hammerjs';
 import { CookieService } from 'ngx-cookie-service';
 import { CommonModule } from "@angular/common";
 
-
-/*
- * Platform and Environment providers/directives/pipes
- */
 import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
 // App is our top level component
@@ -48,7 +44,6 @@ import {CartComponent} from './cart/goods.component'
 import { BoughtComponent } from './bought/goods.component'
 import { GoodProfileComponent } from './goodProfile/goods.component'
 import { AdminComponent } from './admin/goods.component'
-//import { angularProfileCard } from '../../components/main-profile/index';
 import { NoContentComponent } from './no-content';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
@@ -56,7 +51,6 @@ import {HttpClientModule} from '@angular/common/http';
 import '../styles/styles.scss';
 import '../styles/headings.css';
 
-// Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   AppState
@@ -68,9 +62,6 @@ type StoreType = {
   disposeOldHosts: () => void
 };
 
-/**
- * `AppModule` is the main entry point into Angular2's bootstraping process
- */
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
@@ -89,9 +80,6 @@ type StoreType = {
     GoodProfileComponent,
     AdminComponent
   ],
-  /**
-   * Import Angular's modules.
-   */
   imports: [
     CommonModule,
     BrowserAnimationsModule,
@@ -107,9 +95,6 @@ type StoreType = {
     ApolloModule.forRoot(client),
     HttpClientModule,
   ],
-  /**
-   * Expose our Services and Providers into Angular's dependency injection.
-   */
   providers: [
     ENV_PROVIDERS,
     APP_PROVIDERS,
@@ -128,9 +113,6 @@ export class AppModule {
       return;
     }
     console.log('HMR store', JSON.stringify(store, null, 2));
-    /**
-     * Set state
-     */
     this.appState._state = store.state;
     /**
      * Set input values
@@ -156,13 +138,7 @@ export class AppModule {
      * Recreate root elements
      */
     store.disposeOldHosts = createNewHosts(cmpLocation);
-    /**
-     * Save input values
-     */
     store.restoreInputValues = createInputTransfer();
-    /**
-     * Remove styles
-     */
     removeNgStyles();
   }
 
