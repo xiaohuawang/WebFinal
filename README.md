@@ -55,5 +55,5 @@ Bought:            You can check the list of product you bought from this evil w
 
 
 ## Run in local
-                   npm install
-                   npm start
+npm install
+npm start
