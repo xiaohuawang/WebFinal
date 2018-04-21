@@ -14,6 +14,7 @@ import {BoughtComponent} from './bought/goods.component'
 import { GoodProfileComponent } from './goodProfile/goods.component'
 import { AdminComponent } from './admin/goods.component'
 
+
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
   { path: 'posts', loadChildren: './posts#PostsModule' },
