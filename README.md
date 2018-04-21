@@ -55,4 +55,4 @@ Bought:            You can check the list of product you bought from this evil w
 
 
 ## Run in local
-npm install then npm start
+npm install then npm start then run in localhost 3000
