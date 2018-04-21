@@ -1,8 +1,5 @@
 module.exports = {
   link: [
-    /**
-     * <link> tags for 'apple-touch-icon' (AKA Web Clips).
-     */
     { rel: 'apple-touch-icon', sizes: '57x57', href: '/assets/icon/apple-icon-57x57.png' },
     { rel: 'apple-touch-icon', sizes: '60x60', href: '/assets/icon/apple-icon-60x60.png' },
     { rel: 'apple-touch-icon', sizes: '72x72', href: '/assets/icon/apple-icon-72x72.png' },

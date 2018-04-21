@@ -6,9 +6,6 @@ const DefinePlugin = require('webpack/lib/DefinePlugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 
-/**
- * Webpack Constants
- */
 const ENV = process.env.ENV = process.env.NODE_ENV = 'test';
 
 module.exports = function (options) {

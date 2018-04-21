@@ -59,28 +59,11 @@ const GoodSchema = new mongoose.Schema({
     }
 });
 
-/**
- * Add your
- * - pre-save hooks
- * - validations
- * - virtuals
- */
 
-/**
- * Methods
- */
 GoodSchema.method({
 });
 
-/**
- * Statics
- */
 GoodSchema.statics = {
-    /*
-     * Get user
-     * @param {ObjectId} id - The objectId of user.
-     * @returns {Promise<User, APIError>}
-     */
     get(id) {
         return this.findById(id)
             .exec()
@@ -109,13 +92,6 @@ GoodSchema.statics = {
         });
     },
 
-    /**
-     * List users in descending order of 'createdAt' timestamp.
-     * @param {number} skip - Number of users to be skipped.
-     * @param {number} limit - Limit number of users to be returned.
-     * @returns {Promise<User[]>}
-     */
-
     list({ user_id = undefined, limit = 50, type } = {}) {
         type = Number(type);
         switch (type) {
@@ -134,7 +110,4 @@ GoodSchema.statics = {
    }
 };
 
-/**
- * @typedef User
- */
 export default mongoose.model('Good', GoodSchema);
