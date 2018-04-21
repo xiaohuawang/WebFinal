@@ -6,9 +6,7 @@ import {
   ComponentFixture
 } from '@angular/core/testing';
 
-/**
- * Load the implementations that should be tested
- */
+
 import { AppComponent } from './app.component';
 import { AppState } from './app.service';
 
@@ -37,10 +35,6 @@ describe(`App`, () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AppComponent);
     comp    = fixture.componentInstance;
-
-    /**
-     * Trigger initial data binding
-     */
     fixture.detectChanges();
   });
 

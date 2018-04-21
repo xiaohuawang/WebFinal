@@ -16,9 +16,6 @@ let _decorateModuleRef = <T>(value: T): T => { return value; };
 if ('production' === ENV) {
   enableProdMode();
 
-  /**
-   * Production
-   */
   _decorateModuleRef = (modRef: any) => {
     disableDebugTools();
 
@@ -27,9 +24,6 @@ if ('production' === ENV) {
 
   PROVIDERS = [
     ...PROVIDERS,
-    /**
-     * Custom providers in production.
-     */
   ];
 
 } else {
@@ -50,9 +44,6 @@ if ('production' === ENV) {
    */
   PROVIDERS = [
     ...PROVIDERS,
-    /**
-     * Custom providers in development.
-     */
   ];
 
 }
