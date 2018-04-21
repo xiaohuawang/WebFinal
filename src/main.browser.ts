@@ -1,13 +1,6 @@
-/**
- * Angular bootstrapping
- */
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { decorateModuleRef } from './app/environment';
 
-/**
- * App Module
- * our top level module that holds all of our components
- */
 import { AppModule } from './app';
 
 /**
@@ -20,10 +13,6 @@ export function main(): Promise<any> {
     .catch((err) => console.error(err));
 }
 
-/**
- * Needed for hmr
- * in prod this is replace for document ready
- */
 switch (document.readyState) {
   case 'loading':
     document.addEventListener('DOMContentLoaded', _domReadyHandler, false);

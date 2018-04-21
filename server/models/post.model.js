@@ -20,28 +20,11 @@ const PostSchema = new mongoose.Schema({
   }
 });
 
-/**
- * Add your
- * - pre-save hooks
- * - validations
- * - virtuals
- */
-
-/**
- * Methods
- */
 PostSchema.method({
 });
 
-/**
- * Statics
- */
 PostSchema.statics = {
-  /**
-   * Get post
-   * @param {ObjectId} id - The objectId of post.
-   * @returns {Promise<Post, APIError>}
-   */
+
   get(id) {
     return this.findById(id)
       .exec()
@@ -54,12 +37,6 @@ PostSchema.statics = {
       });
   },
 
-  /**
-   * List posts in descending order of 'createdAt' timestamp.
-   * @param {number} skip - Number of posts to be skipped.
-   * @param {number} limit - Limit number of posts to be returned.
-   * @returns {Promise<Post[]>}
-   */
   list({ skip = 0, limit = 50 } = {}) {
     return this.find()
       .sort({ createdAt: -1 })
@@ -69,7 +46,4 @@ PostSchema.statics = {
   }
 };
 
-/**
- * @typedef Post
- */
 export default mongoose.model('Post', PostSchema);

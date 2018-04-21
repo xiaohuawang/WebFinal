@@ -3,7 +3,7 @@ import validate from 'express-validation';
 import paramValidation from '../config/param-validation';
 import goodCtrl from '../controllers/goods.controller';
 
-const router = express.Router(); // eslint-disable-line new-cap
+const router = express.Router();
 
 router.route('/')
   /** GET /api/users - Get list of users */
@@ -24,7 +24,6 @@ router.route('/:goodId')
   /** DELETE /api/users/:userId - Delete user */
   .delete(goodCtrl.remove);
 
-/** Load user when API with userId route parameter is hit */
 router.param('goodId', goodCtrl.load);
 
 export default router;
