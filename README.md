@@ -1,4 +1,4 @@
-# XiaohuaJinhaoproject
+# XiaohuaJinhaoproject (Xiaohua Wang and Jinhao Liu)
 
 This project was created by Xiaohua Wang and Jinhao Liu. This is a shopping cart web application.
 The project is deployed at https://xiaohuajinhaowebapp.herokuapp.com/
@@ -37,7 +37,7 @@ User Registration: User need to put valid email address to register himself.
 User Login:        User can login by providing the username and password that registered before.
 
 Profile View:      When user click the profile tab, the user will be able to view his profile information including
-                   his role, his email and his description
+                   his role, his email and his description, and he can also view the item he has bought.
                    If you login as an admin user, there will be an additional tab called admin, you are able to view all other users' information
 
 Add goods:         When you login as an admin or a seller, you are able to post products on the market, and define its price, you can also add 
