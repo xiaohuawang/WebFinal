@@ -4,10 +4,7 @@ import APIError from '../helpers/APIError';
 import config from '../config/config';
 import User from '../models/user.model'
 
-// sample user, used for authentication
 function login(req, res, next) {
-  // Ideally you'll fetch this from the db
-  // Idea here was to show how jwt works with simplicity
   if (req.body.token) {
     let decoded = jwt.verify(req.body.token, config.jwtSecret);
     return User.get(decoded.id).then(user => {
