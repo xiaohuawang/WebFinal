@@ -1,8 +1,11 @@
 # XiaohuaJinhaoproject (Xiaohua Wang and Jinhao Liu)
 
 This project was created by Xiaohua Wang and Jinhao Liu. This is a shopping cart web application.
+
 The project is deployed at https://xiaohuajinhaowebapp.herokuapp.com/
+
 The youtube video url is https://www.youtube.com/watch?v=eiliNPJtFig&feature=youtu.be
+
 There are three types of user in the web application : admin, buyer and seller.
 
 ## Admin User
