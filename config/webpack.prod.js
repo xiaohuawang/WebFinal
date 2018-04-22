@@ -64,9 +64,6 @@ module.exports = function (env) {
                     include: [helpers.root('src', 'styles')]
                 },
 
-                /**
-                 * Extract and compile SCSS files from .src/styles directory to external CSS file
-                 */
                 {
                     test: /\.scss$/,
                     loader: ExtractTextPlugin.extract({
@@ -80,41 +77,14 @@ module.exports = function (env) {
 
         },
 
-        /**
-         * Add additional plugins to the compiler.
-         *
-         * See: http://webpack.github.io/docs/configuration.html#plugins
-         */
         plugins: [
 
-            /**
-             * Webpack plugin to optimize a JavaScript file for faster initial load
-             * by wrapping eagerly-invoked functions.
-             *
-             * See: https://github.com/vigneshshanmugam/optimize-js-plugin
-             */
             new OptimizeJsPlugin({
                 sourceMap: false
             }),
 
-            /**
-             * Plugin: ExtractTextPlugin
-             * Description: Extracts imported CSS files into external stylesheet
-             *
-             * See: https://github.com/webpack/extract-text-webpack-plugin
-             */
             new ExtractTextPlugin('[name].[contenthash].css'),
 
-            /**
-             * Plugin: DefinePlugin
-             * Description: Define free variables.
-             * Useful for having development builds with debug logging or adding global constants.
-             *
-             * Environment helpers
-             *
-             * See: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
-             */
-            // NOTE: when adding more properties make sure you include them in custom-typings.d.ts
             new DefinePlugin({
                 'ENV': JSON.stringify(METADATA.ENV),
                 'HMR': METADATA.HMR,
@@ -125,15 +95,6 @@ module.exports = function (env) {
                 }
             }),
 
-            /**
-             * Plugin: UglifyJsPlugin
-             * Description: Minimize all JavaScript output of chunks.
-             * Loaders are switched into minimizing mode.
-             *
-             * See: https://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
-             *
-             * NOTE: To debug prod builds uncomment //debug lines and comment //prod lines
-             */
             new UglifyJsPlugin({
                 beautify: false, //prod
                 output: {
@@ -157,12 +118,6 @@ module.exports = function (env) {
                 },
             }),
 
-            /**
-             * Plugin: NormalModuleReplacementPlugin
-             * Description: Replace resources that matches resourceRegExp with newResource
-             *
-             * See: http://webpack.github.io/docs/list-of-plugins.html#normalmodulereplacementplugin
-             */
             new NormalModuleReplacementPlugin(
                 /angular2-hmr/,
                 helpers.root('config/empty.js')

@@ -24,12 +24,6 @@ module.exports = function (options) {
 
       rules: [
 
-        /**
-         * Source map loader support for *.js files
-         * Extracts SourceMaps for source files that as added as sourceMappingURL comment.
-         *
-         * See: https://github.com/webpack/source-map-loader
-         */
         {
           enforce: 'pre',
           test: /\.js$/,
@@ -70,58 +64,30 @@ module.exports = function (options) {
           exclude: [/\.e2e\.ts$/]
         },
 
-        /**
-         * Json loader support for *.json files.
-         *
-         * See: https://github.com/webpack/json-loader
-         */
         {
           test: /\.json$/,
           loader: 'json-loader',
           exclude: [helpers.root('src/index.html')]
         },
 
-        /**
-         * Raw loader support for *.css files
-         * Returns file content as string
-         *
-         * See: https://github.com/webpack/raw-loader
-         */
         {
           test: /\.css$/,
           loader: ['to-string-loader', 'css-loader'],
           exclude: [helpers.root('src/index.html')]
         },
 
-        /**
-         * Raw loader support for *.scss files
-         *
-         * See: https://github.com/webpack/raw-loader
-         */
         {
             test: /\.scss$/,
             loader: ['raw-loader', 'sass-loader'],
             exclude: [helpers.root('src/index.html')]
         },
 
-        /**
-         * Raw loader support for *.html
-         * Returns file content as string
-         *
-         * See: https://github.com/webpack/raw-loader
-         */
         {
           test: /\.html$/,
           loader: 'raw-loader',
           exclude: [helpers.root('src/index.html')]
         },
 
-        /**
-         * Instruments JS files with Istanbul for subsequent code coverage reporting.
-         * Instrument only testing sources.
-         *
-         * See: https://github.com/deepsweet/istanbul-instrumenter-loader
-         */
         {
           enforce: 'post',
           test: /\.(js|ts)$/,
