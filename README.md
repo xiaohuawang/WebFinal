@@ -8,7 +8,7 @@ The youtube video url is https://www.youtube.com/watch?v=eiliNPJtFig&feature=you
 
 There are three types of user in the web application : admin, buyer and seller.
 
-## Admin User
+## Admin
 
 There is only one admin user for this web application. You can not create another admin user.
 When you login as an admin user, you can view and modify all the buyers and sellers' information.
